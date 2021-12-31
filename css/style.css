@@ -1,3 +1,10 @@
+:root {
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 html {
   font-size: 62.5%;
 }
@@ -78,6 +85,7 @@ a {
   border-radius: 20px;
   font-size: 2rem;
   font-weight: 600;
+  margin: 1rem 0;
   padding: 0.5rem 2rem;
   white-space: nowrap;
 }
@@ -141,4 +149,169 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+/* button */
+.btn {
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 2rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* todo: set color for button */
+.btn--primary {
+  background: var();
+  color: #fff;
+}
+/* todo: set another color for primary */
+.btn--primary:hover {
+  background: var();
+}
+.btn--secondary {
+  background: var();
+  color: #fff;
+}
+/* todo: set another color for secondary */
+.btn--secondary:hover {
+  background: var();
+}
+.btn--accent {
+  background: var();
+  color: #fff;
+}
+/* todo: set another color for accent */
+.btn--accent:hover {
+  background: var();
+}
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+.btn--outline {
+  background: #fff;
+  color: var();
+  border: 2px solid var();
+}
+.btn--outline:hover {
+  background: var();
+  color: #fff;
+}
+/* inputs */
+.input {
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+}
+::placeholder {
+  color: #cdcbd7;
+}
+/* todo: define var color in root for input-group */
+.input-group {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  display: flex;
+}
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+}
+.input-group .btn {
+  margin: 4px;
+}
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
+/* plane */
+.plane--populare .card__header {
+  position: relative;
+}
+.plane--populare .card__header::before {
+  content: url(../images/populare.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -7px;
+  right: 6rem;
+}
+@media screen and (min-width: 1024px) {
+  .plan_name {
+    font-size: 1.4rem;
+  }
+  .plan_price {
+    font-size: 5rem;
+  }
+  .plan_builling-cycle {
+    font-size: 1.6rem;
+  }
+}
+
+/* media */
+.media {
+  display: flex;
+}
+.media__title {
+  margin-top: 0;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+.media__image {
+  margin-top: 1rem;
+}
+/* Quotes */
+.quote {
+  font-size: 3rem;
+  font-style: italic;
+  color: #5c5577;
+  line-height: 1.2rem;
+}
+.quote__text::before {
+  content: open-quote;
+}
+.quote__text::after {
+  content: close-quote;
+}
+
+.quote__author {
+  font-size: 3rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0;
+}
+.quote__organization {
+  color: var(--color-headings);
+  opacity: 0.4;
+  font-size: 2rem;
+  font-style: normal;
+}
+.quote__line {
+  position: relative;
+  bottom: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .quote {
+    font-size: 2rem;
+  }
+  .quote__author {
+    font-size: 2.4rem;
+  }
+  .quote__organization {
+    font-size: 1.6rem;
+  }
 }
